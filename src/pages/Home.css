@@ -1,0 +1,99 @@
+.home-container {
+  color: white;
+  padding-top: 80px; 
+}
+
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  
+  border-radius: 12px;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  background-image: linear-gradient(90deg, #00d4ff, #0077ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.85;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 24px;
+  font-size: 1rem;
+  margin: 0 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00d4ff, #0077ff);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #00d4ff;
+  color: #00d4ff;
+}
+
+.btn-secondary:hover {
+  background: #00d4ff;
+  color: white;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 80px 0;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 280px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.feature-card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
