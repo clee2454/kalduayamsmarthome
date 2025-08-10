@@ -1,78 +1,68 @@
+
 .temperature-page {
-  min-height: 100vh;
-  background-image: linear-gradient(135deg, #203a43, #0093d1);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #203a43, #0093d1);
+  font-family: Arial, sans-serif;
 }
 
+
 .temp-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border-radius: 15px;
-  padding: 30px;
-  max-width: 400px;
-  width: 100%;
+  background: white;
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.8s ease;
 }
+
 
 .temp-title {
   font-size: 1.8rem;
-  color: white;
+  color: #003366;
   margin-bottom: 20px;
 }
+
 
 .temp-display {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.temp-display span {
-  color: #00d4ff;
+  font-size: 3rem;
   font-weight: bold;
+  color: #ff6600;
+  margin-bottom: 15px;
 }
 
-.temp-input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+
+.temp-value {
+  font-size: 4rem;
 }
 
-.temp-input {
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  font-size: 1rem;
-  outline: none;
+
+.temp-loading {
+  font-size: 1.2rem;
+  color: #555;
 }
 
-.temp-btn {
-  padding: 10px;
-  background-image: linear-gradient(135deg, #203a43, #0093d1);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.temp-error {
+  font-size: 1.2rem;
+  color: red;
 }
 
-.temp-btn:hover {
- background-image: linear-gradient(135deg, #203a43, #0093d1);
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.6);
+.temp-updated {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+
+@media (max-width: 600px) {
+  .temp-card {
+    padding: 20px 30px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .temp-display {
+    font-size: 2rem;
+  }
+  .temp-value {
+    font-size: 3rem;
   }
 }
